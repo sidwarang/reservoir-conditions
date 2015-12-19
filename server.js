@@ -1,11 +1,13 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var app = express();
+var express = require('express'),
+    bodyParser = require('body-parser'),
+    app = express(),
+    http = require('http'),
+    fs = require('fs'),
+    json;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use("/", express.static(__dirname + '/public'));
 
-var fs = require('fs');
-var json;
 fs.readFile('locations.json', 'utf8', function(err, data){
     if(err) {
         throw err;
@@ -16,11 +18,11 @@ fs.readFile('locations.json', 'utf8', function(err, data){
 });
 var port = 8080;
 
-app.get('/', function(request, response){
+app.get('/api/locations', function(request, response){
     response.setHeader('access-control-allow-origin', '*');
     response.send(json);
 }) 
 
 app.listen(port, function() {
-    console.log('Server started... Listening at port 8080')
+    console.log('Server started.. Goto localhost:8080');
 });
