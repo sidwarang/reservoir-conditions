@@ -1,0 +1,46 @@
+#legend {
+    background: #fff;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    width: 213px;
+    height: 250px;
+    background-color:#fdfdfd;
+    border: 1px solid #000000;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+    font-size:14px
+}
+
+.liquidFillGaugeText {
+    font-family: Helvetica;
+    font-weight: bold;
+}
+
+h3 {
+    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+}
+
+#container {
+    z-index:0;
+    width: 1200px;
+    height: 1100px;
+    margin-left:auto;
+    margin-right:auto;
+    position: relative
+}
+
+#map {
+    z-index:-1;
+    width: 1200px;
+    height: 1100px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#resname {
+    text-align:center;
+    font-weight:bold;
+    font-size:12px;
+    padding: 5px 0px 5px 10px
+}
